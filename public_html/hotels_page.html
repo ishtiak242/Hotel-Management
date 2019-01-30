@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Propert
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Hotel Management</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="hotel.css">
+       
+        <link href="https://fonts.googleapis.com/css?family=Acme|Berkshire+Swash|Lobster|PT+Sans+Narrow|Patua+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Black+Ops+One" rel="stylesheet">
+        <link rel="stylesheet" href="CSSn/trevo.css">
+        <link rel="stylesheet" href="CSSn/font-awesome.min.css ">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <body style="margin-top: 50px; ">
+        <nav class="navbar nav-color  navbar-fixed-top">
+                      <div class="container ">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header ">
+                          <button type="button" class="navbar-toggle  collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="color sr-only">Toggle navigation</span>
+                            <span class="color icon-bar"></span>
+                            <span class="color icon-bar"></span>
+                            <span class="color icon-bar"></span>
+                          </button>
+                            <a class="navbar-brand navbar-img" href="#"><img src="img/hotel.png"></a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                          <ul class="nav navbar-nav navbar-right navbar-color">
+                            <li class="active"><a href="home_page.html">HOME<span class="sr-only">(current)</span></a></li>
+                            <li><a href="hotels_page.html">HOTELS</a></li>
+                            
+                            <li><a href="admin_page.html">ADMIN</a></li>
+                            <li><a href="user_page.html">USER</a></li>
+                            <li><a href="about_us_page.html">ABOUT US</a></li>
+                          </ul>
+
+                          </ul>
+                         
+                       
+                        </div><!-- /.navbar-collapse -->
+                      </div><!-- /.container-fluid -->
+                    </nav>
+        <!---------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="container">
+            <h1 class="h-text">Search for Hotels</h1>
+        </div> 
+        <div class="container" >
+            <form>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group "><i class="fa fa-map-marker input-icon "></i>
+                            <label>Where</label>
+                            <span class="twitter-typeahead" style="position: relative; display: block; direction: ltr;">
+                                
+                                <input id="Hotel_location" class=" form-control " placeholder="City, Hotel Name or U.S. Zip Code" type="text" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">
+
+                                <span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;">
+
+                                </span>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="" data-date-format="MM d, D">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <i class="fa fa-calendar input-icon input-icon-hightlight"></i>
+                                        <label>Check in</label>
+                                        <input id="Check_in" class="form-control " name="start" type="date">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-hightlight"></i>
+                                        <label>Check out</label>
+                                        <input id="Check_out" class="form-control" name="end" type="date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mar-1">
+                        <div class="row">
+                            <div class="col-md-2 " >
+                                <label class="my-checkbox"><p>Single</p>
+                                    <input type="checkbox">
+                                    <span class="checkmark">
+
+                                    </span>
+
+                                </label>
+                            </div>
+                            <div class="col-md-2 " >
+                                <label class="my-checkbox"><p>Double</p>
+                                    <input type="checkbox">
+                                    <span class="checkmark">
+
+                                    </span>
+
+                                </label>
+
+                            </div>
+                            <div class="col-md-8 " >
+                                <b>€ 10</b>
+                                <input id="Price" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/>
+                                <b>€ 1000</b>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input id="Search" class="btn btn-primary " type="button" value="Search for Hotels" onclick="hotels()">
+            </form>
+            <div class="gap gap-small"></div>
+
+        </div>
+        <div class="gap gap-small"></div>
+        <!-- ----------------------------------------------------------------------------------------------------------------------------------->
+        <div class="container">
+            <h1 class="h-text">Top Deals</h1>
+        </div>
+        <div id="div" class="container">
+            <div class="row">
+                <div class="col-md-12 margin ">
+
+
+
+                    <div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/lhotel_porto_bay_sao_paulo_lobby_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="payment_page.html">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <div class="text-rent">
+                                <h3 id="Hotel_name">Times Square </h3>
+                            </div>
+                            <div class="mb0" >
+
+                                <i  class="fa fa-map-marker"></i>
+                                <span id="l1">New York, NY (Upper West Side)</span><br>
+                                <ul class=" main-ul col-md-12  icon-list   star">
+                                    <li class="icon-box">
+                                        <i class="fa fa-male"></i>
+                                        <span class=""> 3</span>
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-bed"></i>
+                                        <span class=""> 2</span>
+
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-shower"></i>
+                                        <span class=""> 1</span>
+                                    </li>
+
+                                </ul>
+
+                                <span class=" text-color">$499 avg/night</span>
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_the_cliff_bay_spa_suite_800x600.jpg" alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="payment_page.html">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                            </ul>
+                            <div class="text-rent">
+                                <h3> Best of West </h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                <span id="l2">New York, NY (Upper West Side)<br>
+                                <ul class=" main-ul col-md-12  icon-list   star">
+                                    <li  class="icon-box">
+                                        <i class="fa fa-male"></i>
+                                        <span class=""> 3</span>
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-bed"></i>
+                                        <span class=""> 2</span>
+
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-shower"></i>
+                                        <span class=""> 1</span>
+                                    </li>
+
+                                </ul>
+
+                                <span class=" text-color">$499 avg/night</span>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_serra_golf_suite_800x600 (1).jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="payment_page.html">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-o"></i>
+                                </li>
+                            </ul>
+                            <div class="text-rent">
+                                <h3>Greenwich Village</h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                New York, NY (Upper West Side)<br>
+                                <ul class=" main-ul col-md-12  icon-list   star">
+                                    <li  class="icon-box">
+                                        <i class="fa fa-male"></i>
+                                        <span class=""> 3</span>
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-bed"></i>
+                                        <span class=""> 2</span>
+
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-shower"></i>
+                                        <span class=""> 1</span>
+                                    </li>
+
+                                </ul>
+
+                                <span class=" text-color">$499 avg/night</span>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_serra_golf_suite2_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="payment_page.html">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                                <li><i class="fa fa-star-o"></i>
+                                </li>
+                            </ul>
+                            <div class="text-rent">
+                                <h3>Midtown Manhattan </h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                New York, NY (Upper West Side)<br>
+                                <ul class=" main-ul col-md-12  icon-list   star">
+                                    <li  class="icon-box">
+                                        <i class="fa fa-male"></i>
+                                        <span class=""> 3</span>
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-bed"></i>
+                                        <span class=""> 2</span>
+
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-shower"></i>
+                                        <span class=""> 1</span>
+                                    </li>
+
+                                </ul>
+
+                                <span class=" text-color">$499 avg/night</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_serra_golf_living_room_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="payment_page.html">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <div class="text-rent">
+                                <h3> Artist Studio</h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                New York, NY (Upper West Side)<br>
+                                <ul class=" main-ul col-md-12  icon-list   star">
+                                    <li  class="icon-box">
+                                        <i class="fa fa-male"></i>
+                                        <span class=""> 3</span>
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-bed"></i>
+                                        <span class=""> 2</span>
+
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-shower"></i>
+                                        <span class=""> 1</span>
+                                    </li>
+
+                                </ul>
+
+                                <span class=" text-color">$499 avg/night</span>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_serra_golf_library_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="payment_page.html">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                            </ul>
+                            <div class="text-rent">
+                                <h3>Soho Art Gallery </h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                New York, NY (Upper West Side)<br>
+                                <ul class=" main-ul col-md-12  icon-list   star">
+                                    <li  class="icon-box">
+                                        <i class="fa fa-male"></i>
+                                        <span class=""> 3</span>
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-bed"></i>
+                                        <span class=""> 2</span>
+
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-shower"></i>
+                                        <span class=""> 1</span>
+                                    </li>
+
+                                </ul>
+
+                                <span class=" text-color">$499 avg/night</span>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_1_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="payment_page.html">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-o"></i>
+                                </li>
+                            </ul>
+                            <div class="text-rent">
+                                <h3>Elegance </h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                New York, NY (Upper West Side)<br>
+                                <ul class=" main-ul col-md-12  icon-list   star">
+                                    <li  class="icon-box">
+                                        <i class="fa fa-male"></i>
+                                        <span class=""> 3</span>
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-bed"></i>
+                                        <span class=""> 2</span>
+
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-shower"></i>
+                                        <span class=""> 1</span>
+                                    </li>
+
+                                </ul>
+
+                                <span class=" text-color">$499 avg/night</span>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_rio_internacional_de_luxe_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="payment_page.html">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                                <li><i class="fa fa-star-o"></i>
+                                </li>
+                            </ul>
+                            <div class="text-rent">
+                                <h3>Luxury Studio </h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                New York, NY (Upper West Side)<br>
+
+                                <ul class=" main-ul col-md-12  icon-list   star">
+                                    <li  class="icon-box">
+                                        <i class="fa fa-male"></i>
+                                        <span class=""> 3</span>
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-bed"></i>
+                                        <span class=""> 2</span>
+
+                                    </li>
+                                    <li  class="icon-box">
+                                        <i class="fa fa-shower"></i>
+                                        <span class=""> 1</span>
+                                    </li>
+
+                                </ul>
+                                <span class=" text-color">$499 avg/night</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div><!--end-->
+            </div>
+        </div>
+
+
+        <!--        <>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>part1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+
+        <div class="container">
+            <h1 class="h-text">Hotels in Popular Destinations</h1>
+
+            <div class="col-md-12 margin ">
+
+
+
+
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/Srimangal-Slide-1.jpg " alt="">
+                        <div class="overlay">
+                            <h2>Srimongol</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/352_large-thumbnail_sunset_on_the_sea.jpg " alt="">
+                        <div class="overlay">
+                            <h2>Cox's Bazar</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/sundarban_bg1-626x365.jpg" alt="">
+                        <div class="overlay">
+                            <h2>Sundarban</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/M-Yousuf-Tushar-980x735.jpg" alt="">
+                        <div class="overlay">
+                            <h2>Bandarban</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1 ">
+                        <img class="img-responsive" src="img/Srimangal-Slide-1.jpg " alt="">
+                        <div class="overlay">
+                            <h2>Srimongol</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/352_large-thumbnail_sunset_on_the_sea.jpg " alt="">
+                        <div class="overlay">
+                            <h2>Cox's Bazar</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/sundarban_bg1-626x365.jpg" alt="">
+                        <div class="overlay">
+                            <h2>Sundarban</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/M-Yousuf-Tushar-980x735.jpg" alt="">
+                        <div class="overlay">
+                            <h2>Bandarban</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/Srimangal-Slide-1.jpg " alt="">
+                        <div class="overlay">
+                            <h2>Srimongol</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/352_large-thumbnail_sunset_on_the_sea.jpg " alt="">
+                        <div class="overlay">
+                            <h2>Cox's Bazar</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/sundarban_bg1-626x365.jpg" alt="">
+                        <div class="overlay">
+                            <h2>Sundarban</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect1 margin1">
+                        <img class="img-responsive" src="img/M-Yousuf-Tushar-980x735.jpg" alt="">
+                        <div class="overlay">
+                            <h2>Bandarban</h2>
+                            <p>
+                                <a href="#">
+
+                                    68065 reviews<br>
+                                    359 offers from $88
+                                </a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------------------------------->
+        <footer id="main-footer">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3">
+
+                        <p class="text-3">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
+                        <ul class="icon-list icon-color">
+                            <li>
+                                <a class="fa fa-facebook fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-twitter fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-google-plus fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-linkedin fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-pinterest fa-lg icon-color" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class="text-4" >Newsletter</h4>
+                        <form>
+                            <label>Enter your E-mail Address</label>
+                            <input type="text" class="form-control">
+                            <p class=""><small>*We Never Send Spam</small>
+                            </p>
+                            <input type="submit" class="btn btn-primary" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="icon-list text-3">
+                            <li><a href="#">About US</a>
+                            </li>
+                            <li><a href="#">Press Centre</a>
+                            </li>
+                            <li><a href="#">Best Price Guarantee</a>
+                            </li>
+                            <li><a href="#">Travel News</a>
+                            </li>
+                            <li><a href="#">Jobs</a>
+                            </li>
+                            <li><a href="#">Privacy Policy</a>
+                            </li>
+                            <li><a href="#">Terms of Use</a>
+                            </li>
+                            <li><a href="#">Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 ">
+                        <h4 class="text-4">Have Questions?</h4>
+                        <h4 class="text-4">+1-202-555-0173</h4>
+                        <h4><a href="#" class="text-4">support@traveler.com</a></h4>
+                        <p>24/7 Dedicated Customer Support</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <script src="js/custom/hotels.js" type="text/javascript"></script>>                                
+
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TravoPH</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="hotel.css">
+       
+        <link href="https://fonts.googleapis.com/css?family=Acme|Berkshire+Swash|Lobster|PT+Sans+Narrow|Patua+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Black+Ops+One" rel="stylesheet">
+        <link rel="stylesheet" href="CSSn/trevo.css">
+        <link rel="stylesheet" href="CSSn/font-awesome.min.css ">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <body style="margin-top: 50px; ">
+        <nav class="navbar nav-color  navbar-fixed-top">
+                      <div class="container ">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header ">
+                          <button type="button" class="navbar-toggle  collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="color sr-only">Toggle navigation</span>
+                            <span class="color icon-bar"></span>
+                            <span class="color icon-bar"></span>
+                            <span class="color icon-bar"></span>
+                          </button>
+                            <a class="navbar-brand navbar-img" href="#"><img src="img/hotel.png"></a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                          <ul class="nav navbar-nav navbar-right navbar-color">
+                            <li class="active"><a href="home_page.html">HOME<span class="sr-only">(current)</span></a></li>
+                            <li><a href="hotels_page.html">HOTELS</a></li>
+                            <li><a href="about_us_page.html">ABOUT US</a></li>
+                            <li><a href="#">ADMIN</a></li>
+                            <li><a href="user_page.html">USER</a></li>
+                          </ul>
+
+                          </ul>
+                         
+                       
+                        </div><!-- /.navbar-collapse -->
+                      </div><!-- /.container-fluid -->
+                    </nav>
+        <!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Customer</h3>
+
+                    <form name="paymentform">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>First &amp; Last Name</label>
+                                    <input id="name" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input id="phonenumber" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>E-mail</label>
+                                    <input id="email" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="paypal" src="img/paypal.png" alt="Image Alternative text" title="Image Title">
+                            <p>Important: You will be redirected to PayPal's website to securely complete your payment.</p><a class="btn btn-primary">Checkout via Paypal</a>	
+                        </div>
+
+                        <div class="col-md-6">
+                            <h4>Pay via Credit/Debit Card</h4>
+                            
+
+                            <form name="paymentform1" class="">
+                                <div class="clearfix">
+                                    <div class="form-group col-md-7">
+                                        <label>Card Number</label>
+                                        <input id="cardnumber" class="form-control" placeholder="xxxx xxxx xxxx xxxx" type="text">
+                                        <span class=""></span>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label>CVC</label>
+                                        <input id="cvc" class="form-control" placeholder="xxxx" type="text">
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="form-group col-md-7">
+                                        <label>Cardholder Name</label>
+                                        <input id="cardholdnum"  class="form-control" type="text">
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label> Thru</label>
+                                        <input id="valid" class="form-control" placeholder="mm/yy" type="text">
+                                    </div>
+                                </div>
+
+                                <input class="btn btn-primary btn-mr" type="button" value="Proceed Payment"onclick="payment1()">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4" >
+                    <div class="paybox">
+                        <div class=" clearfix pay-head">
+                            <a class="" href="#">
+                                <img class="img-responsive img-thumbnail img-sz" src="img/hotel_1_800x600.jpg" alt="Image Alternative text" title="hotel 1">
+                            </a>
+                            <div class="" >
+                                <h5 class="payment-title"><a href="#">InterContinental New York Barclay</a></h5>
+                                <ul class=" main-ul   icon-list   star1">
+                                    <li><i class="fa fa-star"></i>
+                                    </li>
+                                    <li><i class="fa fa-star"></i>
+                                    </li>
+                                    <li><i class="fa fa-star"></i>
+                                    </li>
+                                    <li><i class="fa fa-star"></i>
+                                    </li>
+                                    <li><i class="fa fa-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 paybox1" >
+
+                            <h3>Booking for 7 nights</h3>
+                            <div class="float">
+                                <p class="">April, 26</p>
+                                <p class="day">Saturday</p>
+                            </div><i class="fa fa-arrow-right float arrow-position"></i>
+                            <div class="">
+                                <p class="">May, 3</p>
+                                <p class="day1">Saturday</p>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 paybox1" >
+                            <div>
+                                <h3>Room</h3>
+                                <h5>Club LVL Water View Dbl/Dbl Premier Room</h5>
+                                <div class="">
+
+                                    <p class="float">7 Nights</p>
+                                    <p class="mony-mr">$150<small>/per day</small>
+                                    </p>
+
+
+                                    <div class="">
+                                        <p class="float">Taxes</p>
+                                        <p class="mony-mr">$15<small>/per day</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 paybox1">
+                            <h4 class=""><small>Total trip: </small>$1,155 </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="gap"></div>
+        </div>
+        <!--        <>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>part1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+
+
+
+
+        <footer id="main-footer">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3">
+
+                        <p class="text-3">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
+                        <ul class="icon-list icon-color">
+                            <li>
+                                <a class="fa fa-facebook fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-twitter fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-google-plus fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-linkedin fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-pinterest fa-lg icon-color" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class="text-4" >Newsletter</h4>
+                        <form>
+                            <label>Enter your E-mail Address</label>
+                            <input type="text" class="form-control">
+                            <p class=""><small>*We Never Send Spam</small>
+                            </p>
+                            <input type="submit" class="btn btn-primary" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="icon-list text-3">
+                            <li><a href="#">About US</a>
+                            </li>
+                            <li><a href="#">Press Centre</a>
+                            </li>
+                            <li><a href="#">Best Price Guarantee</a>
+                            </li>
+                            <li><a href="#">Travel News</a>
+                            </li>
+                            <li><a href="#">Jobs</a>
+                            </li>
+                            <li><a href="#">Privacy Policy</a>
+                            </li>
+                            <li><a href="#">Terms of Use</a>
+                            </li>
+                            <li><a href="#">Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 ">
+                        <h4 class="text-4">Have Questions?</h4>
+                        <h4 class="text-4">+1-202-555-0173</h4>
+                        <h4><a href="#" class="text-4">support@traveler.com</a></h4>
+                        <p>24/7 Dedicated Customer Support</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer> 
+        <script src="js/custom/payment.js"></script>                               
+
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

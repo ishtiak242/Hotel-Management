@@ -1,0 +1,108 @@
+.first-image img{
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.first-image {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-color: #eee;
+    background: rgba(0, 0, 0, 0.3) url('img/515366.jpg') repeat scroll 0 0;
+    z-index: 1;
+
+}
+.image-title{
+    padding: 259px 0px;
+    font-family: 'Lobster', cursive;
+ }
+.text-title h1{
+    font-size: 50px;
+    color: white;
+    
+    margin:0 auto;  
+}
+
+.color{
+    background-color:  black;
+}
+.text-title p{
+    font-size: 15px;
+    color: white;
+}
+.button{
+    padding: 20px;
+}
+.shadow{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.latest-title h2{
+	font-family: 'Acme', sans-serif;
+	font-size: 50px;
+	text-decoration: underline;
+	padding: 82px 20px 20px 20px;
+}
+.latest-title{
+	margin-bottom: 20px;
+}
+.latest-image img{
+	width: 100%;
+}
+.latest-text2 , .latest-icon{
+	widows: 50%;
+	float:left;
+}
+.latest-icon h6{
+	text-align: left;
+}
+
+.admin-image > img {
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.admin-image > a {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.admin-image-right > ul {
+    text-align: right;
+}
+
+.admin-image-right li {
+    display: inline-block;
+    margin: 0 10px;
+    list-style-type: none;
+    float: left;
+}
+.admin-image-right a {
+    font-weight: 300;
+}
+
+.admin-image-right ul li a i {
+    color: #e01a22;
+}
+.latest-whole
+{
+	margin-bottom: 69px;
+}
+.navbar-img img{
+    height: 50px;
+    width: 50px;
+    color: #D79E30;
+}
+.nav-color{
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.navbar-color li a{
+    	
+
+    color: #D79E30;
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    
+   
+}
